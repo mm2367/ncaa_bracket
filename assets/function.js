@@ -34,31 +34,31 @@ southDiv.classList.add('division')
 bracketContainer.appendChild(southDiv);
 
 for(let i = 0; i < 4; i++){
-    let round = document.createElement('div');
+    let round = document.createElement('ul');
     round.classList.add('round');
     southDiv.appendChild(round);
 }
 
 for(let i = 0; i < 8; i++){
-    let game = document.createElement('div');
+    let game = document.createElement('li');
     game.classList.add('game');
     round[0].appendChild(game);
 }
 
 for(let i = 0; i < 4; i++){
-    let game = document.createElement('div');
+    let game = document.createElement('li');
     game.classList.add('game');
     round[1].appendChild(game);
 }
 
 for(let i = 0; i < 2; i++){
-    let game = document.createElement('div');
+    let game = document.createElement('li');
     game.classList.add('game');
     round[2].appendChild(game);
 }
 
 
-let game = document.createElement('div');
+let game = document.createElement('li');
 game.classList.add('game');
 round[3].appendChild(game);
 
@@ -67,11 +67,18 @@ round[3].appendChild(game);
 
 for(let i = 0; i < 15; i++){
     let team1 = document.createElement('p');
-    team1.classList.add('team');  
+    team1.classList.add('team','team-top');
     team2 = document.createElement('p');
-    team2.classList.add('team');
+    team2.classList.add('team','team-bottom');
     games[i].appendChild(team1);
+    let teamSpacer=document.createElement('li')
+    teamSpacer.classList.add('team-spacer')
+    games[i].appendChild(teamSpacer)
     games[i].appendChild(team2);
+    let gameSpacer =document.createElement('li')
+    gameSpacer.classList.add('game-spacer')
+    games[i].appendChild(gameSpacer)
+    console.log(games)
 
 }
 
@@ -224,8 +231,7 @@ for(let i = 0; i < 15; i++){
             }
         }
 
-        console.log(round);
-        
+
            
 }
 
